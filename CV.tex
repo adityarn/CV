@@ -1,0 +1,159 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Aditya Narayanan - vita},
+	pdfauthor={Aditya},
+	pdfproducer={}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Aditya Narayanan}\\[1cm]
+Indian Institute of Technology, Madras\\
+Chennai\\
+India \texttt{600036}\\
+Phone: \texttt{+91 9790926904}\\
+email: \href{mailto:adityarn@gmail.com}{adityarn@gmail.com}\\
+%\textsc{url}: \href{http://www.ias.edu/spfeatures/einstein/}{http://www.ias.edu/spfeatures/einstein/}\\ 
+\vfill
+Born:  May 14th, 1988---Chennai, India\\
+Nationality:  Indian
+
+%%\hrule
+\section*{Current position}
+\emph{Graduate Student}, Indian Institute of Technology, Madras
+
+%%\hrule
+\section*{Areas of specialization}
+Shelf sea processes • Southern Ocean dynamics • Dense Shelf Water formation processes • Circumpolar Deep Water dynamics • Fluid Dynamics • Marine Turbulence
+
+%%\hrule
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2014-}\textsc{PhD}, currently ongoing, in Physical Oceanography, IIT Madras\\
+\years{2013-2014}\textsc{MS} program, converted to direct PhD, IIT Madras \\
+\years{2006-2010}\textsc{BTech} in Civil Engineering, National Institute of Technology, Jalandhar
+
+%\hrule
+\section*{Courses undertaken in present program}
+\noindent
+\begin{table}[htbp]
+  \centering
+  \input{./tables/grades.tex}
+  \label{TabGrades}
+\end{table}
+{\bf CGPA: \texttt{8.74}}
+
+\section*{Publications and Conferences}
+\subsection*{Under review}
+\years{2019}Aditya Narayanan, Sarah Gille, Matthew Mazloff, Murali K, ``Water mass characteristics of the Antarctic margins and the production and seasonality of Dense Shelf Water'', submitted to \emph{Journal of Geophysical Research: Oceans}
+\subsection*{Published}
+\years{2018}Aditya Narayanan, Murali K, (2018), ``Analysis of Turbulence in the Weddell Sea: Observations and Modeling'', \emph{Ocean Sciences Meeting, Portland}\\
+\years{2016}Aditya, Narayanan (2016), ``Mathematical and numerical modeling of the physics of cold water downslope flows'', \emph{CLIVAR Open Science Conference, Qingdao}
+
+
+\section*{Workshops Attended}
+\noindent
+\years{2019}Air Sea Interactions in the Bay of Bengal, organised by TIFR-ICTS, Bengaluru\\
+\years{2016}International Summer School on Earth System Modeling, jointly organised by ICTP, Trieste, Italy, and Indian Institute of Tropical Meteorology, Pune\\
+\years{2015}Numerical modeling of free surface flows in coastal and ocean engineering, hands on experience, jointly organised by IITM and NTNU\\
+\years{2015}Internation Symposium on Antarctic Earth Sciences, Goa\\
+\years{2014}High Performance Computing Workshop, jointly organised by IIT Madras, IIT Bombay, C-DAC Pune, and NVIDIA Corporation\\
+
+
+\section*{Skills and tools}
+\noindent
+\begin{enumerate}
+\item Descriptive and dynamical physical oceanography.
+\item Climate and ocean data analysis: can handle large data sets that are larger than RAM, can post-process data sets on cluster computing platforms across distributed memory
+\item Scientific computing in Python, including Scipy, Numpy
+\item Climate tools: Python Basemap, GSW toolbox
+\item Parallel computing
+\item Bash scripting
+\end{enumerate}
+
+
+\section*{Appointments held}
+\noindent
+\years{2013-}Half time teaching assistant, IITM \\
+\years{2010-2013}Project Engineer, Flowline Systems Pvt Ltd
+
+%% \section*{Philosophy}
+%% \noindent
+%% The Southern Ocean is an important driver of the global climate. The oceanic thermal forcing on the ice sheets are a big unknown in the climate forecasts. I feel a sense of moral responsibility towards the vulnerable communities and the ecosystems which are threatened by the impacts of rapid climate change. \\ 
+
+%% \vspace{1ex}
+
+%% I believe that as scientists, it is our responsibility to communicate our work to the public and to those who are in positions of power, so that their decisions and policies may be well informed. I wish to become part of the global climate science community that is currently engaged in one of the greatest scientific endeavours in history.
+
+
+...
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+
+\end{document}
